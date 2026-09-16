@@ -1,0 +1,99 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Planeta earth = new Planeta(Planets.EARTH);
+        Planeta mercury = new Planeta(Planets.MERCURY);
+        Planeta venus = new Planeta(Planets.VENUS);
+        Planeta mars = new Planeta(Planets.MARS);
+        Planeta jupiter = new Planeta(Planets.JUPITER);
+        Planeta saturn = new Planeta(Planets.SATURN);
+        Planeta uranus = new Planeta(Planets.URANUS);
+        Planeta neptune = new Planeta(Planets.NEPTUNE);
+
+        Scanner scanner = new Scanner(System.in);
+        String planetName = scanner.nextLine();
+
+        switch (planetName.toLowerCase()) {
+            case "earth":
+                System.out.println("Planet class Earth group");
+                break;
+            case "mercury":
+                System.out.println("Planet class Earth group");
+                break;
+            case "venus":
+                System.out.println("Planet class Earth group");
+                break;
+            case "mars":
+                System.out.println("Planet class Earth group");
+                break;
+            case "jupiter":
+                System.out.println("Planet class Giant group");
+                break;
+            case "saturn":
+                System.out.println("Planet class Giant group");
+                break;
+            case "uranus":
+                System.out.println("Planet class Giant group");
+                break;
+            case "neptune":
+                System.out.println("Planet class Giant group");
+                break;
+            default:
+                System.out.println("planet class unknown");
+                break;
+        }
+    }
+}
+
+public class Planeta {
+    private Planets name;
+    private double mass;
+    private double radius;
+    private double distance;
+    private boolean population;
+
+    public void setName(Planets name) {
+        this.name = name;
+    }
+
+    public void setMass(double mass) {
+        this.mass = mass;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
+    public void setPopulation(boolean population) {
+        this.population = population;
+    }
+
+    @Override
+    public String toString() {
+        return "Planeta{" +
+                "name=" + name +
+                ", mass=" + mass +
+                ", radius=" + radius +
+                ", distance=" + distance +
+                ", population=" + population +
+                '}';
+    }
+}
+
+
+
+public enum Planets {
+    EARTH,
+    MERCURY,
+    VENUS,
+    MARS,
+    JUPITER,
+    SATURN,
+    URANUS,
+    NEPTUNE;
+}
